@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortfolioHUB</title>
-  <base href="/PortfolioHUB/">
+  <title>portifolioHUB</title>
+  <base href="/portifolioHUB/">
   <link rel="icon" href="favicon.ico">
   <style>
     body { font-family: Arial, sans-serif; margin: 2rem; }
@@ -13,14 +13,105 @@
   </style>
 </head>
 <body>
-  <h1>Bem-vindo ao PortfolioHUB</h1>
-  <p>Esta é a página inicial do seu site estático publicado via GitHub Pages.</p>
-  <nav>
-    <a href="index.html">Início</a>
-    <!-- Adicione mais links conforme necessário -->
-  </nav>
-  <footer>
-    <p>Deploy automático via GitHub Actions.</p>
+  <header style="text-align:center; margin-bottom:2rem;">
+    <h1 style="font-size:2.5rem; color:#2c3e50;">PortifolioHUB</h1>
+    <p style="font-size:1.2rem; color:#555;">Repositório criado para a Entrega Intermediária do Desafio de Portifólio, consolidando projetos acadêmicos e pessoais, boas práticas de versionamento, colaboração, GitHub Pages e integração com LinkedIn.</p>
+  </header>
+  <main style="max-width:900px; margin:auto;">
+    <section style="margin-bottom:2rem;">
+      <h2>Projetos Incluídos</h2>
+      <table style="width:100%; border-collapse:collapse; margin-bottom:1rem;">
+        <thead>
+          <tr style="background:#f4f4f4;">
+            <th style="padding:8px; border:1px solid #ddd;">Tipo</th>
+            <th style="padding:8px; border:1px solid #ddd;">Projeto</th>
+            <th style="padding:8px; border:1px solid #ddd;">Descrição breve</th>
+            <th style="padding:8px; border:1px solid #ddd;">Tecnologias</th>
+            <th style="padding:8px; border:1px solid #ddd;">Caminho</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:8px; border:1px solid #ddd;">Acadêmico</td>
+            <td style="padding:8px; border:1px solid #ddd;">Lógica de Programação</td>
+            <td style="padding:8px; border:1px solid #ddd;">Scripts Python resolvendo problemas clássicos de lógica e matemática.</td>
+            <td style="padding:8px; border:1px solid #ddd;">Python</td>
+            <td style="padding:8px; border:1px solid #ddd;">projetos-academicos/logica-de-programacao/</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
+            <td style="padding:8px; border:1px solid #ddd;">Jogo de Adivinhação</td>
+            <td style="padding:8px; border:1px solid #ddd;">Jogo simples onde o usuário tenta adivinhar um número secreto (CLI e GUI).</td>
+            <td style="padding:8px; border:1px solid #ddd;">Python</td>
+            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/adivinhacao/</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
+            <td style="padding:8px; border:1px solid #ddd;">Calculadora</td>
+            <td style="padding:8px; border:1px solid #ddd;">Calculadora básica com operações matemáticas, versão CLI e interface Tkinter.</td>
+            <td style="padding:8px; border:1px solid #ddd;">Python</td>
+            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/calculadora/</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
+            <td style="padding:8px; border:1px solid #ddd;">Lista de Tarefas</td>
+            <td style="padding:8px; border:1px solid #ddd;">Aplicação para gerenciar tarefas, com versão terminal e interface Tkinter.</td>
+            <td style="padding:8px; border:1px solid #ddd;">Python</td>
+            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/lista/</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Detalhes dos Projetos</h3>
+      <ul>
+        <li><b>Lógica de Programação:</b> Scripts para exercícios de lógica, incluindo: cálculo de volume de esfera, cálculo de água necessária, distância entre pontos, ordenação de números. <br>Arquivos: <code>questao1_volume_esfera.py</code>, <code>questao2_agua_necessaria.py</code>, <code>questao3_distancia_pontos.py</code>, <code>questao4_ordem_crescente.py</code>, <code>questao_1_ordem_crescente.py</code>, <code>questao_2.py</code>, <code>questao_3_ler_notas.py</code></li>
+        <li><b>Jogo de Adivinhação:</b> Jogo em Python onde o computador sorteia um número de 1 a 10 e o usuário tenta adivinhar. Possui versão terminal e interface gráfica (Tkinter).</li>
+        <li><b>Calculadora:</b> Calculadora simples em Python, com operações básicas (soma, subtração, multiplicação, divisão), disponível em CLI e GUI (Tkinter).</li>
+        <li><b>Lista de Tarefas:</b> Aplicação para adicionar, listar e remover tarefas. Disponível em terminal e interface gráfica (Tkinter).</li>
+      </ul>
+    </section>
+    <section style="margin-bottom:2rem;">
+      <h2>GitHub Pages</h2>
+      <p>O conteúdo da pasta <code>web/</code> é publicado automaticamente como página estática através do <b>GitHub Actions</b>.</p>
+      <p><b>Endereço do site:</b> <a href="https://barbosaamandacf.github.io/portifolioHUB/" target="_blank">https://barbosaamandacf.github.io/portifolioHUB/</a></p>
+    </section>
+    <section style="margin-bottom:2rem;">
+      <h2>Links de Pull Request</h2>
+      <ul>
+        <li><b>PR de Colaboração Interna:</b> <a href="https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1" target="_blank">https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1</a></li>
+        <li><b>PR de Fork para repositório público:</b> <a href="https://github.com/matferreira1/puma-challenge-code/pull/1" target="_blank">https://github.com/matferreira1/puma-challenge-code/pull/1</a></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:2rem;">
+      <h2>Integração com LinkedIn</h2>
+      <ul>
+        <li><b>URL do LinkedIn:</b> Adicione a URL do seu perfil ou projeto.</li>
+        <li><b>Descrição do Projeto no LinkedIn:</b> Este repositório contém uma coleção de projetos acadêmicos e pessoais. Inclui desde scripts simples em Python até páginas web publicadas em GitHub Pages.</li>
+      </ul>
+    </section>
+    <section style="margin-bottom:2rem;">
+      <h2>Vídeo de Apresentação</h2>
+      <p><b>Link para o vídeo de apresentação no YouTube (não listado):</b> <a href="#">URL do vídeo de apresentação</a></p>
+      <ul>
+        <li>Visão geral do portfólio.</li>
+        <li>Explicação sobre a estrutura dos projetos.</li>
+        <li>Demonstração de um dos projetos em funcionamento.</li>
+        <li>Explicação sobre a integração com GitHub Pages e a publicação do site.</li>
+      </ul>
+    </section>
+    <section style="margin-bottom:2rem;">
+      <h2>Checklist de Entrega</h2>
+      <ol>
+        <li><b>Estrutura do repositório</b> está organizada com pastas para projetos acadêmicos e pessoais.</li>
+        <li><b>README.md</b> atualizado para cada projeto e para o repositório principal.</li>
+        <li><b>GitHub Pages</b> configurado corretamente, com o conteúdo publicado da pasta <code>web/</code>.</li>
+        <li><b>Pull Requests</b> realizados e links para os PRs incluídos no arquivo README.</li>
+        <li><b>Vídeo de Apresentação</b> gravado e link inserido no README.</li>
+        <li><b>Integração com LinkedIn</b> feita, com links de perfil e projetos publicados.</li>
+      </ol>
+    </section>
+  </main>
+  <footer style="text-align:center; margin-top:2rem; color:#888;">
+    <p>Deploy automático via GitHub Actions &mdash; PortifolioHUB &copy; 2025</p>
   </footer>
 </body>
 </html>
