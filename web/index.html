@@ -1,117 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portifolioHUB</title>
-  <base href="/portifolioHUB/">
-  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortifolioHUB</title>
+  <base href="/portifolioHUB/" />
+  <link rel="icon" href="favicon.ico" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; }
-    h1 { color: #2c3e50; }
-    a { color: #2980b9; }
+    :root {
+      --rosa: #D46A6A;
+      --cinza-texto: #2c3e50;
+      --cinza-claro: #f4f4f4;
+      --fundo: #ffffff;
+      --fundo-tabela: #fdf2f2;
+      --borda: #ddd;
+      --fundo-header-tabela: var(--rosa);
+      --texto-header-tabela: #fff;
+      --fundo-footer: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fundo: #1e1e1e;
+        --cinza-texto: #e0e0e0;
+        --borda: #444;
+        --fundo-tabela: #2a2a2a;
+        --fundo-header-tabela: #b85b5b;
+        --texto-header-tabela: #fff;
+        --fundo-footer: #121212;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: var(--fundo);
+      color: var(--cinza-texto);
+      transition: all 0.3s ease;
+    }
+
+    h1, h2 {
+      color: var(--rosa);
+    }
+
+    a {
+      color: var(--rosa);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid var(--rosa);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--cinza-texto);
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      background-color: var(--fundo-tabela);
+      transition: background 0.3s ease;
+    }
+
+    th, td {
+      padding: 8px;
+      border: 1px solid var(--borda);
+      text-align: left;
+    }
+
+    thead {
+      background: var(--fundo-header-tabela);
+      color: var(--texto-header-tabela);
+    }
+
+    tr:nth-child(even) {
+      background: var(--fundo-tabela);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    ul li::marker {
+      color: var(--rosa);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #aaa;
+      border-top: 1px solid var(--rosa);
+      padding-top: 1rem;
+      background-color: var(--fundo-footer);
+    }
+
+    .button-link {
+      display: inline-block;
+      background: var(--rosa);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .button-link:hover {
+      background: #b85b5b;
+    }
+
+    /* Botão de alternância manual (opcional) */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--rosa);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .theme-toggle:hover {
+      background: #b85b5b;
+    }
   </style>
 </head>
 <body>
-  <header style="text-align:center; margin-bottom:2rem;">
-    <h1 style="font-size:2.5rem; color:#2c3e50;">PortifolioHUB</h1>
-    <p style="font-size:1.2rem; color:#555;">Repositório criado para a Entrega Intermediária do Desafio de Portifólio, consolidando projetos acadêmicos e pessoais, boas práticas de versionamento, colaboração, GitHub Pages e integração com LinkedIn.</p>
+  <header>
+    <h1>PortifolioHUB</h1>
+    <p>Repositório criado para a Entrega Intermediária do Desafio de Portifólio.</p>
   </header>
-  <main style="max-width:900px; margin:auto;">
-    <section style="margin-bottom:2rem;">
+
+  <main>
+    <!-- Projetos -->
+    <section>
       <h2>Projetos Incluídos</h2>
-      <table style="width:100%; border-collapse:collapse; margin-bottom:1rem;">
+      <table>
         <thead>
-          <tr style="background:#f4f4f4;">
-            <th style="padding:8px; border:1px solid #ddd;">Tipo</th>
-            <th style="padding:8px; border:1px solid #ddd;">Projeto</th>
-            <th style="padding:8px; border:1px solid #ddd;">Descrição breve</th>
-            <th style="padding:8px; border:1px solid #ddd;">Tecnologias</th>
-            <th style="padding:8px; border:1px solid #ddd;">Caminho</th>
+          <tr>
+            <th>Tipo</th>
+            <th>Projeto</th>
+            <th>Descrição breve</th>
+            <th>Tecnologias</th>
+            <th>Caminho</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style="padding:8px; border:1px solid #ddd;">Acadêmico</td>
-            <td style="padding:8px; border:1px solid #ddd;">Lógica de Programação</td>
-            <td style="padding:8px; border:1px solid #ddd;">Scripts Python resolvendo problemas clássicos de lógica e matemática.</td>
-            <td style="padding:8px; border:1px solid #ddd;">Python</td>
-            <td style="padding:8px; border:1px solid #ddd;">projetos-academicos/logica-de-programacao/</td>
+            <td>Acadêmico</td>
+            <td>Lógica de Programação</td>
+            <td>Scripts Python resolvendo problemas clássicos de lógica e matemática.</td>
+            <td>Python</td>
+            <td>projetos-academicos/logica-de-programacao/</td>
           </tr>
           <tr>
-            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
-            <td style="padding:8px; border:1px solid #ddd;">Jogo de Adivinhação</td>
-            <td style="padding:8px; border:1px solid #ddd;">Jogo simples onde o usuário tenta adivinhar um número secreto (CLI e GUI).</td>
-            <td style="padding:8px; border:1px solid #ddd;">Python</td>
-            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/adivinhacao/</td>
+            <td>Pessoal</td>
+            <td>Jogo de Adivinhação</td>
+            <td>Jogo simples onde o usuário tenta adivinhar um número secreto (CLI e GUI).</td>
+            <td>Python</td>
+            <td>projetos-pessoais/adivinhacao/</td>
           </tr>
           <tr>
-            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
-            <td style="padding:8px; border:1px solid #ddd;">Calculadora</td>
-            <td style="padding:8px; border:1px solid #ddd;">Calculadora básica com operações matemáticas, versão CLI e interface Tkinter.</td>
-            <td style="padding:8px; border:1px solid #ddd;">Python</td>
-            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/calculadora/</td>
+            <td>Pessoal</td>
+            <td>Calculadora</td>
+            <td>Calculadora básica com operações matemáticas, versão CLI e interface Tkinter.</td>
+            <td>Python</td>
+            <td>projetos-pessoais/calculadora/</td>
           </tr>
           <tr>
-            <td style="padding:8px; border:1px solid #ddd;">Pessoal</td>
-            <td style="padding:8px; border:1px solid #ddd;">Lista de Tarefas</td>
-            <td style="padding:8px; border:1px solid #ddd;">Aplicação para gerenciar tarefas, com versão terminal e interface Tkinter.</td>
-            <td style="padding:8px; border:1px solid #ddd;">Python</td>
-            <td style="padding:8px; border:1px solid #ddd;">projetos-pessoais/lista/</td>
+            <td>Pessoal</td>
+            <td>Lista de Tarefas</td>
+            <td>Aplicação para gerenciar tarefas, com versão terminal e interface Tkinter.</td>
+            <td>Python</td>
+            <td>projetos-pessoais/lista/</td>
           </tr>
         </tbody>
       </table>
-      <h3>Detalhes dos Projetos</h3>
-      <ul>
-        <li><b>Lógica de Programação:</b> Scripts para exercícios de lógica, incluindo: cálculo de volume de esfera, cálculo de água necessária, distância entre pontos, ordenação de números. <br>Arquivos: <code>questao1_volume_esfera.py</code>, <code>questao2_agua_necessaria.py</code>, <code>questao3_distancia_pontos.py</code>, <code>questao4_ordem_crescente.py</code>, <code>questao_1_ordem_crescente.py</code>, <code>questao_2.py</code>, <code>questao_3_ler_notas.py</code></li>
-        <li><b>Jogo de Adivinhação:</b> Jogo em Python onde o computador sorteia um número de 1 a 10 e o usuário tenta adivinhar. Possui versão terminal e interface gráfica (Tkinter).</li>
-        <li><b>Calculadora:</b> Calculadora simples em Python, com operações básicas (soma, subtração, multiplicação, divisão), disponível em CLI e GUI (Tkinter).</li>
-        <li><b>Lista de Tarefas:</b> Aplicação para adicionar, listar e remover tarefas. Disponível em terminal e interface gráfica (Tkinter).</li>
-      </ul>
     </section>
-    <section style="margin-bottom:2rem;">
+
+    <!-- GitHub Pages -->
+    <section>
       <h2>GitHub Pages</h2>
-      <p>O conteúdo da pasta <code>web/</code> é publicado automaticamente como página estática através do <b>GitHub Actions</b>.</p>
-      <p><b>Endereço do site:</b> <a href="https://barbosaamandacf.github.io/portifolioHUB/" target="_blank">https://barbosaamandacf.github.io/portifolioHUB/</a></p>
+      <p>
+        <b>Endereço do site:</b>
+        <a href="https://barbosaamandacf.github.io/portifolioHUB/" target="_blank" class="button-link">
+          Acessar PortifolioHUB
+        </a>
+      </p>
     </section>
-    <section style="margin-bottom:2rem;">
+
+    <!-- Pull Requests -->
+    <section>
       <h2>Links de Pull Request</h2>
       <ul>
-        <li><b>PR de Colaboração Interna:</b> <a href="https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1" target="_blank">https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1</a></li>
-        <li><b>PR de Fork para repositório público:</b> <a href="https://github.com/matferreira1/puma-challenge-code/pull/1" target="_blank">https://github.com/matferreira1/puma-challenge-code/pull/1</a></li>
+        <li>
+          <b>PR de Colaboração Interna:</b>
+          <a href="https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1" target="_blank">
+            https://github.com/Barbosaamandacf/Lista-de-tarefas/pull/1
+          </a>
+        </li>
+        <li>
+          <b>PR de Fork para repositório público:</b>
+          <a href="https://github.com/matferreira1/puma-challenge-code/pull/1" target="_blank">
+            https://github.com/matferreira1/puma-challenge-code/pull/1
+          </a>
+        </li>
       </ul>
     </section>
-    <section style="margin-bottom:2rem;">
+
+    <!-- LinkedIn -->
+    <section>
       <h2>Integração com LinkedIn</h2>
       <ul>
         <li><b>URL do LinkedIn:</b> Adicione a URL do seu perfil ou projeto.</li>
-        <li><b>Descrição do Projeto no LinkedIn:</b> Este repositório contém uma coleção de projetos acadêmicos e pessoais. Inclui desde scripts simples em Python até páginas web publicadas em GitHub Pages.</li>
+        <li>
+          <b>Descrição do Projeto no LinkedIn:</b>
+          Este repositório contém uma coleção de projetos acadêmicos e pessoais, incluindo
+          desde scripts simples em Python até páginas web publicadas em GitHub Pages.
+        </li>
       </ul>
     </section>
-    <section style="margin-bottom:2rem;">
+
+    <!-- Vídeo -->
+    <section>
       <h2>Vídeo de Apresentação</h2>
-      <p><b>Link para o vídeo de apresentação no YouTube (não listado):</b> <a href="#">URL do vídeo de apresentação</a></p>
-      <ul>
-        <li>Visão geral do portfólio.</li>
-        <li>Explicação sobre a estrutura dos projetos.</li>
-        <li>Demonstração de um dos projetos em funcionamento.</li>
-        <li>Explicação sobre a integração com GitHub Pages e a publicação do site.</li>
-      </ul>
-    </section>
-    <section style="margin-bottom:2rem;">
-      <h2>Checklist de Entrega</h2>
-      <ol>
-        <li><b>Estrutura do repositório</b> está organizada com pastas para projetos acadêmicos e pessoais.</li>
-        <li><b>README.md</b> atualizado para cada projeto e para o repositório principal.</li>
-        <li><b>GitHub Pages</b> configurado corretamente, com o conteúdo publicado da pasta <code>web/</code>.</li>
-        <li><b>Pull Requests</b> realizados e links para os PRs incluídos no arquivo README.</li>
-        <li><b>Vídeo de Apresentação</b> gravado e link inserido no README.</li>
-        <li><b>Integração com LinkedIn</b> feita, com links de perfil e projetos publicados.</li>
-      </ol>
+      <p>
+        <b>Link para o vídeo de apresentação no YouTube (não listado):</b>
+        <a href="#" target="_blank" class="button-link">Assistir Vídeo</a>
+      </p>
     </section>
   </main>
-  <footer style="text-align:center; margin-top:2rem; color:#888;">
-    <p>Deploy automático via GitHub Actions &mdash; PortifolioHUB &copy; 2025</p>
+
+  <footer>
+    <p>Deploy automático via GitHub Actions &mdash; <strong>PortifolioHUB</strong> © 2025</p>
   </footer>
 </body>
 </html>
+
