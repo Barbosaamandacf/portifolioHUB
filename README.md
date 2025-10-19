@@ -57,7 +57,7 @@ Cada projeto possui um `README.md` com detalhes sobre como rodá-lo e próximos 
 O conteúdo da pasta `web/` é publicado automaticamente como página estática através do **GitHub Actions**.
 
  **Endereço do site:**  
- [https://barbosaamandacf.github.io/portifolioHUB/](https://barbosaamandacf.github.io/PortfolioHUB/)
+ [https://barbosaamandacf.github.io/portifolioHUB/](https://barbosaamandacf.github.io/portifolioHUB/)
 
 ---
 
