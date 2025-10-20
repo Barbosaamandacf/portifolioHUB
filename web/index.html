@@ -128,7 +128,6 @@
       background: #b85b5b;
     }
 
-    /* Botão de alternância manual (opcional) */
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -247,8 +246,10 @@
     <section>
       <h2>Vídeo de Apresentação</h2>
       <p>
-        <b>Link para o vídeo de apresentação no YouTube (não listado):</b>
-        <a href="https://youtu.be/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="button-link">Assistir Vídeo</a>
+        <b>Link para o vídeo de apresentação no YouTube:</b>
+        <a href="https://youtu.be/fXFB5F1b_I8" target="_blank" rel="noopener noreferrer" class="button-link">
+          Assistir Vídeo
+        </a>
       </p>
     </section>
   </main>
@@ -263,7 +264,6 @@
     (function () {
       const btn = document.getElementById('themeToggle');
       const root = document.documentElement;
-      // persiste preferência do usuário
       const saved = localStorage.getItem('color-scheme-preference');
       if (saved) root.style.colorScheme = saved;
 
@@ -277,4 +277,5 @@
   </script>
 </body>
 </html>
+
 
