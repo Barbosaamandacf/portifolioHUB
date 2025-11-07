@@ -1,6 +1,5 @@
 name: CI de Verificação
 
-# Rodar em todo push para a 'main' e em todo Pull Request
 on:
   push:
     branches: [ main ]
@@ -9,17 +8,18 @@ on:
 
 jobs:
   # Job para verificar (lint) o HTML
-  lint-html:
-    runs-on: ubuntu-latest # Rodar em uma máquina Linux virtual
+  validate-html: # Mudei o nome do job para ser mais claro
+    runs-on: ubuntu-latest
 
     steps:
       # 1. Baixar o código do repositório
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      # 2. Rodar um validador de HTML
-      # (Checando o index.html dentro da sua pasta 'web')
+      # 2. Rodar um validador de HTML (usando html-validate)
+      # Esta é a ferramenta nova e correta
       - name: Validar HTML
-        uses: htmllint/htmllint-action@v1
+        uses: html-validate/action@v2
         with:
+          # Apontando para o seu arquivo
           files: "web/index.html"
