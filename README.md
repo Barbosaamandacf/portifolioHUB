@@ -17,6 +17,73 @@ Este repositório serve como portfólio de projetos e demonstra as seguintes pr�
 
 ---
 
+## Planejamento da Implantação
+
+Esta seção detalha o planejamento estratégico, o ciclo de vida e as ferramentas utilizadas para a concepção, desenvolvimento e publicação deste projeto.
+
+### Etapas do Projeto
+
+O desenvolvimento seguiu um ciclo de vida estruturado para garantir a qualidade e a organização:
+
+1.  **Planejamento e Concepção:**
+    * Definição do escopo: criar um hub de portfólio que sirva como um projeto de avaliação.
+    * Escolha da arquitetura: site estático (HTML/CSS/JS) para garantir performance e simplicidade no deploy.
+    * Definição da plataforma: uso do ecossistema GitHub (Repositório, Pages, Projects).
+
+2.  **Configuração do Ambiente:**
+    * Criação do repositório no GitHub.
+    * Configuração do `git` local.
+    * Ativação do GitHub Pages para deploy automático a partir da branch principal (`main`).
+
+3.  **Desenvolvimento e Integração:**
+    * Codificação da estrutura base (HTML5 semântico) e estilo (CSS, incluindo *dark mode*).
+    * Integração dos links do ecossistema GitHub (PRs, Issues, Projetos) no site.
+    * Uso do Google Gemini para auxiliar na geração de código (snippets) e revisão de conteúdo.
+
+4.  **Testes e Validação:**
+    * Testes de navegabilidade e responsividade.
+    * Revisão de acessibilidade e validação de HTML (apoiado por análises do Gemini).
+    * Testes de colaboração (criação de PRs internos e recebimento de PRs externos).
+
+5.  **Publicação e Iteração:**
+    * Merge final na branch principal.
+    * Verificação do deploy automático via GitHub Pages.
+    * Criação da documentação final (`README.md`) e do vídeo de apresentação.
+
+### Ferramentas e Tecnologias (Tech Stack)
+
+* **IDE (Editor de Código):** Visual Studio Code
+* **Versionamento:** Git
+* **Repositório e Gestão:** GitHub (incluindo GitHub Issues e GitHub Projects)
+* **Hospedagem e Deploy (CI/CD):** GitHub Pages
+* **Assistente de IA:** Google Gemini (para revisão de código, depuração, segurança, acessibilidade e geração de documentação).
+
+---
+
+## Gestão de Segurança e Colaboração
+
+Este repositório adota boas práticas de segurança e colaboração para garantir a integridade do projeto:
+
+* **Proteção da Branch Principal:** A branch `main` (ou `master`) está protegida. Todas as alterações devem ser feitas através de *feature branches* e submetidas via Pull Request (PR).
+* **Revisão de Código:** Os Pull Requests são utilizados como mecanismo de revisão de código antes da integração (merge).
+* **Gestão de Credenciais:** Nenhuma chave de API, token ou senha é armazenada publicamente no repositório.
+* **Revisão de Segurança com IA:** O Google Gemini foi utilizado durante o desenvolvimento para revisar *snippets* de código, identificar potenciais más práticas de segurança e sugerir melhorias na configuração.
+
+---
+
+## Testes e Garantia de Qualidade (QA)
+
+Para assegurar a qualidade e a funcionalidade do projeto, foram adotadas as seguintes práticas de teste e melhoria contínua:
+
+* **Testes Manuais:** Verificação funcional de todos os links do site, testes de navegabilidade e checagem da responsividade em diferentes resoluções.
+* **Validação de Deploy:** Confirmação de que o deploy no GitHub Pages estava funcionando corretamente após cada *merge* na branch principal.
+* **Uso do Google Gemini para QA:** O Gemini foi usado como assistente de qualidade para:
+    * **Revisão de HTML/CSS:** Sugerindo melhorias na estrutura semântica do HTML e otimizações no CSS.
+    * **Verificação de Acessibilidade:** Apoiando na identificação de pontos básicos de acessibilidade (como contraste e atributos `alt`).
+    * **Revisão da Documentação:** Auxiliando na correção e clareza dos textos do `README.md` e do site.
+
+   ---
+
 ## Projetos Incluídos
 
 | Tipo      | Projeto                | Descrição breve                                                                 | Tecnologias | Caminho |
