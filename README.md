@@ -17,6 +17,49 @@ Este repositório serve como portfólio de projetos e demonstra as seguintes pr�
 
 ---
 
+## Planejamento da Implantação
+
+Esta seção detalha o planejamento estratégico, o ciclo de vida e as ferramentas utilizadas para a concepção, desenvolvimento e publicação deste projeto.
+
+### Etapas do Projeto
+
+O desenvolvimento seguiu um ciclo de vida estruturado para garantir a qualidade e a organização:
+
+1.  **Planejamento e Concepção:**
+    * Definição do escopo: criar um hub de portfólio que sirva como um projeto de avaliação.
+    * Escolha da arquitetura: site estático (HTML/CSS/JS) para garantir performance e simplicidade no deploy.
+    * Definição da plataforma: uso do ecossistema GitHub (Repositório, Pages, Projects).
+
+2.  **Configuração do Ambiente:**
+    * Criação do repositório no GitHub.
+    * Configuração do `git` local.
+    * Ativação do GitHub Pages para deploy automático a partir da branch principal (`main`).
+
+3.  **Desenvolvimento e Integração:**
+    * Codificação da estrutura base (HTML5 semântico) e estilo (CSS, incluindo *dark mode*).
+    * Integração dos links do ecossistema GitHub (PRs, Issues, Projetos) no site.
+    * Uso do Google Gemini para auxiliar na geração de código (snippets) e revisão de conteúdo.
+
+4.  **Testes e Validação:**
+    * Testes de navegabilidade e responsividade.
+    * Revisão de acessibilidade e validação de HTML (apoiado por análises do Gemini).
+    * Testes de colaboração (criação de PRs internos e recebimento de PRs externos).
+
+5.  **Publicação e Iteração:**
+    * Merge final na branch principal.
+    * Verificação do deploy automático via GitHub Pages.
+    * Criação da documentação final (`README.md`) e do vídeo de apresentação.
+
+### Ferramentas e Tecnologias (Tech Stack)
+
+* **IDE (Editor de Código):** Visual Studio Code
+* **Versionamento:** Git
+* **Repositório e Gestão:** GitHub (incluindo GitHub Issues e GitHub Projects)
+* **Hospedagem e Deploy (CI/CD):** GitHub Pages
+* **Assistente de IA:** Google Gemini (para revisão de código, depuração, segurança, acessibilidade e geração de documentação).
+  
+---
+
 ## Projetos Incluídos
 
 | Tipo      | Projeto                | Descrição breve                                                                 | Tecnologias | Caminho |
