@@ -1,0 +1,18 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+# Habilitar para 'pip' (Python), pois seus projetos usam Python
+  - package-ecosystem: "pip"
+    directory: "/" # Verificar o repositório inteiro
+    schedule:
+      interval: "weekly" # Verificar semanalmente
+
+  # Habilitar para 'github-actions' (para manter o CI/CD atualizado)
+  - package-ecosystem: "github-actions"
+    directory: "/" # Verificar a pasta .github/workflows
+    schedule:
+      interval: "weekly"
