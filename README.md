@@ -16,6 +16,11 @@ Este repositório serve como portfólio de projetos e demonstra as seguintes pr�
 - **Vídeo de Apresentação:** Demonstração visual do repositório e dos principais projetos.
 
 ---
+## Assistência com IA (Google GEMINI)
+
+Conforme a proposta do desafio, este projeto utilizou o Google GEMINI como ferramenta de apoio e guia durante o processo de implantação, especialmente na configuração de segurança e na estruturação da documentação.
+
+---
 
 ## Projetos Incluídos
 
@@ -65,6 +70,12 @@ Permite marcar tarefas concluídas e remover concluídas.
 
 **Endereço do site:**  
  [https://barbosaamandacf.github.io/portifolioHUB/](https://barbosaamandacf.github.io/portifolioHUB/)
+
+---
+
+## Políticas de Segurança
+
+Este repositório implementa as práticas de segurança exigidas pelo desafio. Foi configurada uma **Regra de Proteção de Branch** (Branch Protection Rule) para a branch `main`, exigindo Pull Requests para todas as alterações.
 
 ---
 
