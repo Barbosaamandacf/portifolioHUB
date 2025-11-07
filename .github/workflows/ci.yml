@@ -7,19 +7,27 @@ on:
     branches: [ main ]
 
 jobs:
-  # Job para verificar (lint) o HTML
-  validate-html: # Mudei o nome do job para ser mais claro
+  validate-html:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Baixar o código do repositório
+      # 1. Baixar o código (Oficial - sabemos que funciona)
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      # 2. Rodar um validador de HTML (usando html-validate)
-      # Esta é a ferramenta nova e correta
-      - name: Validar HTML
-        uses: html-validate/action@v2
+      # 2. Configurar o Node.js (Oficial)
+      # Precisamos disso para instalar o validador
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # Apontando para o seu arquivo
-          files: "web/index.html"
+          node-version: '20' # Versão 20 do Node
+
+      # 3. Instalar o validador de HTML
+      # 'npm' é o gerenciador de pacotes que vem com o Node
+      - name: Instalar o html-validate
+        run: npm install html-validate
+
+      # 4. Rodar o validador no seu arquivo
+      # 'npx' é o comando para rodar o pacote que acabamos de instalar
+      - name: Validar HTML
+        run: npx html-validate web/index.html
