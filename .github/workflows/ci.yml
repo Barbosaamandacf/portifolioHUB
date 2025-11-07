@@ -1,0 +1,25 @@
+name: CI de Verificação
+
+# Rodar em todo push para a 'main' e em todo Pull Request
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Job para verificar (lint) o HTML
+  lint-html:
+    runs-on: ubuntu-latest # Rodar em uma máquina Linux virtual
+
+    steps:
+      # 1. Baixar o código do repositório
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2. Rodar um validador de HTML
+      # (Checando o index.html dentro da sua pasta 'web')
+      - name: Validar HTML
+        uses: htmllint/htmllint-action@v1
+        with:
+          files: "web/index.html"
